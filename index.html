@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="present">
+					<!--<h2>Data Analysis with Python and pandas using Jupyter Notebook</h2>-->
+					<h3>Jupyter notebook 로 데이터 분석</h3>
+					<h5>여자개발자모임터 / 전수현 </h5>
+				</section>
+
+				<section data-markdown>
+					<code>
+						## Python version 3.3+ or 2.7+
+
+						 ~/ python --version
+						Python 2.7.10
+
+						## Installing Jupyter using Anaconda and conda
+						 ~/dev/ wget https://repo.continuum.io/archive/Anaconda2-4.3.1-MacOSX-x86_64.sh
+						 ~/dev/ ./Anaconda2-4.3.1-MacOSX-x86_64.sh
+						Welcome to Anaconda2 4.3.1 (by Continuum Analytics, Inc.)
+
+						In order to continue the installation process, please review the license
+						agreement.
+						Please, press ENTER to continue
+
+						..
+						Do you wish the installer to prepend the Anaconda2 install location
+						to PATH in your /Users/suhyunjeon/.bash_profile ? [yes|no]
+						[yes] >>>  yes
+					</code>
+				</section>
+
+				<section data-markdown>
+					<code>
+						Prepending PATH=/Users/suhyunjeon/anaconda2/bin to PATH in /Users/suhyunjeon/.bash_profile
+						A backup will be made to: /Users/suhyunjeon/.bash_profile-anaconda2.bak
+
+						For this change to become active, you have to open a new terminal.
+
+						Thank you for installing Anaconda2!
+
+						Share your notebooks and packages on Anaconda Cloud!
+						Sign up for free: https://anaconda.org
+
+						>>>
+
+						 ~/anaconda2/ jupyter notebook
+
+
+						데이터 셋
+						https://www.kaggle.com/c/titanic/data
+
+					</code>
+				</section>
+
+				<section>
+					<a href="http://localhost:8888/notebooks/Demo/titanic.ipynb" target="_blank">demo 보기</a>
+
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script src="plugin/markdown/marked.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="qunit-1.12.0.js"></script>
+
+		<script src="test/test-markdown.js"></script>
+
+
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
